@@ -1,0 +1,21 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summary | GUDLFT Registration</title>
+  </head>
+  <body>
+    <h3>Points display board:</h3>
+    <ul>
+      {% for c in clubs %}
+        <li>
+          <b>{{ c['name'] }}</b><br />
+          Points: {{ c['points'] }}<br />
+        </li>
+        <hr />
+      {% endfor %}
+
+      <a href="{{ url_for('index') }}">Retour</a>
+    </ul>
+  </body>
+</html>
