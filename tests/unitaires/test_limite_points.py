@@ -1,9 +1,9 @@
-club_name = "Simply Lift"
+club_name = "Iron Temple"
 competition_name = "Spring Festival"
 
 
 def test_club_should_not_book_more_than_points(client):
-    booked_places = 15
+    booked_places = 10
 
     response = client.post(
         '/purchasePlaces',
