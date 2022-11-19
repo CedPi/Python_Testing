@@ -48,4 +48,56 @@
 
     We also like to show how well we're testing, so there's a module called 
     [coverage](https://coverage.readthedocs.io/en/coverage-5.1/) you should add to your project.
+    
+-----------------------------------------------------------------------------------------------
+
+## How to execute tests and reports
+(please ensure you installed all modules recquired via pip install -r requirements.txt)
+
+- First, switch branch to "QA"
+```bash
+git checkout QA
+```
+
+
+- Launch unit tests
+```bash
+pytest tests/unitaires/
+```
+
+
+- Launch integration tests
+```bash
+pytest tests/integration/
+```
+
+
+- Launch functionnal tests
+```bash
+pytest tests/fonctionnels/
+```
+
+
+- You can also launch all tests at once
+```bash
+pytest tests/
+```
+
+
+- Create coverage report
+```bash
+pytest --cov=. --cov-report html
+```
+Then check for "htmlcov" directory just created, then execute "index.html"
+
+
+- Check the performance of the application
+```bash
+locust -f tests/performances/performance_test.py
+```
+Then go to http://localhost:8089/
+- Set the number of users to 6
+- Set the host to http://127.0.0.1:5000/
+- Then click the Start "swarming" button
+
 
