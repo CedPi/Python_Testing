@@ -32,6 +32,6 @@ class PerfTest(HttpUser):
                 "competition": self.competition_name
             })
 
-    # @task
-    # def test_dashboard(self):
-    #     self.client.get("/dashboard")
+    @task
+    def test_dashboard(self):
+        self.client.get("/dashboard")
