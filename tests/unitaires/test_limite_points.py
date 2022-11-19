@@ -19,7 +19,7 @@ def test_club_should_not_book_more_than_points(client):
 
 
 def test_club_book_should_be_ok(client):
-    booked_places = 3
+    booked_places = 1
 
     response = client.post(
         '/purchasePlaces',

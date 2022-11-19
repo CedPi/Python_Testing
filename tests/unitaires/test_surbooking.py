@@ -18,7 +18,7 @@ def test_club_should_not_book_more_than_available(client):
 
 
 def test_club_book_number_of_places_ok(client):
-    booked = 5
+    booked = 3
     response = client.post(
         '/purchasePlaces',
         data={

@@ -1,3 +1,6 @@
+from tests.conftest import PLACE_PRICE
+
+
 club_name = "Simply Lift"
 club_points = 13
 competition_name = "Spring Festival"
@@ -14,7 +17,7 @@ def test_club_point_should_substract(client):
         follow_redirects=True
     )
 
-    expected_data = str('Points available: ' + str(club_points - booked_places))
+    expected_data = str('Points available: ' + str(club_points - booked_places * PLACE_PRICE))
     data = response.data.decode()
     
     assert response.status_code == 200

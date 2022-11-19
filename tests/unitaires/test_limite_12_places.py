@@ -18,7 +18,7 @@ def test_club_should_not_book_more_than_12_places_one_pass(client):
 
 
 def test_club_book_less_than_12_places(client, expected_status_code=200):
-    booked = 5
+    booked = 2
     response = client.post(
         '/purchasePlaces',
         data={

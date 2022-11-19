@@ -5,6 +5,9 @@ import pytest
 import server
 
 
+PLACE_PRICE= 3
+
+
 @pytest.fixture
 def client():
 
